@@ -1,0 +1,122 @@
+@charset "UTF-8";
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+  font-size: 1.6em;
+  background-color: #243856;
+  color: rgb(228, 228, 228);
+  font-weight: 500;
+}
+
+.wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 10px 10px 0;
+  h1 {
+    font-size: 30px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  main {
+    margin-top: 20px;
+
+    .controller-container {
+      font-size: 0;
+      padding-right: 10px;
+      margin-bottom: 20px;
+      input {
+        font-size: 16px;
+        outline: none;
+        border: none;
+        -webkit-appearance: none;
+        margin-bottom: 10px;
+        transition: 0.3s;
+      }
+      .inpTask {
+        background-color: #fff;
+        width: 300px;
+        padding: 2px 5px;
+      }
+      .btnTask {
+        display: block;
+        background-color: rgb(67, 206, 102);
+        color: #fff;
+        width: 80px;
+        padding: 2px 7px;
+        &:hover {
+          background-color: rgb(40, 141, 66);
+        }
+      }
+    }
+  }
+
+  .btnDeleteAll {
+    background-color: rgb(206, 83, 67);
+    color: #fff;
+    width: 80px;
+    height: 30px;
+    outline: none;
+    border: none;
+    transition: 0.3s;
+    &:hover {
+      background-color: rgb(141, 52, 40);
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    max-width: calc(900px - 310px);
+
+    li {
+      display: flex;
+      margin-bottom: 20px;
+      max-width: 300px;
+      .finish {
+        outline: none;
+        border: none;
+        font-size: 18px;
+        background-color: transparent;
+        cursor: pointer;
+        color: rgb(219, 142, 79);
+        padding: 0;
+      }
+      p {
+        width: 100%;
+        margin-left: 10px;
+        word-wrap: break-word;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  main {
+    display: flex;
+
+    ul {
+      border-left: 1px solid rgb(228, 228, 228);
+      .finish {
+        outline: none;
+        border: none;
+        font-size: 18px;
+        background-color: transparent;
+        cursor: pointer;
+        color: rgb(219, 142, 79);
+        margin-left: 10px;
+      }
+    }
+  }
+}

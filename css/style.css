@@ -1,0 +1,141 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+  font-size: 1.6em;
+  background-color: #243856;
+  color: #e4e4e4;
+  font-weight: 500;
+}
+
+.wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 10px 10px 0;
+}
+
+.wrapper h1 {
+  font-size: 30px;
+}
+
+.wrapper h2 {
+  font-size: 18px;
+}
+
+.wrapper header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.wrapper main {
+  margin-top: 20px;
+}
+
+.wrapper main .controller-container {
+  font-size: 0;
+  padding-right: 10px;
+  margin-bottom: 20px;
+}
+
+.wrapper main .controller-container input {
+  font-size: 16px;
+  outline: none;
+  border: none;
+  -webkit-appearance: none;
+  margin-bottom: 10px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.wrapper main .controller-container .inpTask {
+  background-color: #fff;
+  width: 300px;
+  padding: 2px 5px;
+}
+
+.wrapper main .controller-container .btnTask {
+  display: block;
+  background-color: #43ce66;
+  color: #fff;
+  width: 80px;
+  padding: 2px 7px;
+}
+
+.wrapper main .controller-container .btnTask:hover {
+  background-color: #288d42;
+}
+
+.wrapper .btnDeleteAll {
+  background-color: #ce5343;
+  color: #fff;
+  width: 80px;
+  height: 30px;
+  outline: none;
+  border: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.wrapper .btnDeleteAll:hover {
+  background-color: #8d3428;
+}
+
+.wrapper ul {
+  margin: 0;
+  padding: 0;
+  max-width: calc(900px - 310px);
+}
+
+.wrapper ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+  max-width: 300px;
+}
+
+.wrapper ul li .finish {
+  outline: none;
+  border: none;
+  font-size: 18px;
+  background-color: transparent;
+  cursor: pointer;
+  color: #db8e4f;
+  padding: 0;
+}
+
+.wrapper ul li p {
+  width: 100%;
+  margin-left: 10px;
+  word-wrap: break-word;
+}
+
+@media screen and (min-width: 600px) {
+  main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  main ul {
+    border-left: 1px solid #e4e4e4;
+  }
+  main ul .finish {
+    outline: none;
+    border: none;
+    font-size: 18px;
+    background-color: transparent;
+    cursor: pointer;
+    color: #db8e4f;
+    margin-left: 10px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

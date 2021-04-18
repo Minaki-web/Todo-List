@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="./css/reset.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="//cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.js"></script>
+    <title>My Todo List</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Todo List</h1>
+        <h2>What is your task?</h2>
+      </header>
+      <main>
+        <section class="controller-container">
+          <form>
+            <input type="text" class="inpTask" />
+            <input type="submit" value="Add Task" class="btnTask" />
+          </form>
+          <input type="button" value="Delete" class="btnDeleteAll" />
+        </section>
+        <section class="todo-container">
+          <ul class="list-todo" role="list"></ul>
+        </section>
+      </main>
+    </div>
+    <script src="./js/todo.js"></script>
+  </body>
+</html>
