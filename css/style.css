@@ -12,7 +12,7 @@ body {
   padding: 0 10px;
 }
 
-.wrapper header {
+header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -25,31 +25,37 @@ body {
   height: 60px;
 }
 
-.wrapper header h1 {
+header h1 {
   font-size: 30px;
 }
 
-.wrapper header h2 {
+header h2 {
   font-size: 18px;
 }
 
-.wrapper main {
+main {
   min-height: calc(100vh - 60px);
 }
 
 @media screen and (min-width: 600px) {
-  .wrapper main {
+  main {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
 }
 
-.wrapper main .controller-container {
+main .controller-container {
   margin-bottom: 20px;
 }
 
-.wrapper main .controller-container input {
+@media screen and (min-width: 600px) {
+  main .controller-container {
+    width: 310px;
+  }
+}
+
+main .controller-container input {
   font-size: 16px;
   outline: none;
   border: none;
@@ -60,49 +66,49 @@ body {
   transition: 0.3s;
 }
 
-.wrapper main .controller-container .inpTask {
+main .controller-container .inpTask {
   background-color: #fff;
   width: 100%;
   padding: 8px 10px;
 }
 
-.wrapper main .controller-container .controller-btn input[type="submit"] {
+main .controller-container .controller-btn input[type="submit"] {
   color: #fff;
   padding: 10px 10px;
   cursor: pointer;
   min-width: 90px;
 }
 
-.wrapper main .controller-container .controller-btn .btnTask {
+main .controller-container .controller-btn .btnTask {
   background-color: #43ce66;
 }
 
-.wrapper main .controller-container .controller-btn .btnTask:hover {
+main .controller-container .controller-btn .btnTask:hover {
   background-color: #288d42;
 }
 
-.wrapper main .controller-container .controller-btn .btnDeleteAll {
+main .controller-container .controller-btn .btnDeleteAll {
   background-color: #ce5343;
   margin-left: 10px;
 }
 
-.wrapper main .controller-container .controller-btn .btnDeleteAll:hover {
+main .controller-container .controller-btn .btnDeleteAll:hover {
   background-color: #8d3428;
 }
 
-.wrapper ul {
+main .todo-container ul {
   margin: 0;
   padding: 0;
 }
 
-.wrapper ul li {
+main .todo-container ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 20px;
 }
 
-.wrapper ul li .finish {
+main .todo-container ul li .finish {
   display: block;
   font-size: 18px;
   width: 30px;
@@ -117,8 +123,14 @@ body {
   padding: 0;
 }
 
-.wrapper ul li p {
+main .todo-container ul li p {
   width: calc(100% - 30px - 10px);
   word-wrap: break-word;
+}
+
+footer {
+  font-size: 14px;
+  text-align: center;
+  font-weight: normal;
 }
 /*# sourceMappingURL=style.css.map */
