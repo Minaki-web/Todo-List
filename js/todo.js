@@ -11,7 +11,7 @@ function deleteData() {
       Swal.fire({
         title: "Are you sure?",
         text: "You are trying to delete the task!",
-        icon: "warning",
+        icon: "question",
         showCancelButton: true,
         confirmButtonColor: "#3085d6",
         cancelButtonColor: "#d33",
@@ -54,9 +54,10 @@ btnTask.addEventListener("click", (e) => {
   Swal.fire({
     position: "bottom-end",
     icon: "success",
-    title: "Your work has been saved",
+    toast: true,
+    title: "Your task has been saved.",
     showConfirmButton: false,
-    timer: 1500,
+    timer: 4000,
   });
 
   const li = document.createElement("li");

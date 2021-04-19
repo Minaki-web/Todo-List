@@ -1,12 +1,16 @@
 @charset "UTF-8";
 
-html {
-  font-size: 62.5%;
+@mixin query($minWidth) {
+  @media screen and (min-width: $minWidth+ "px") {
+    @content;
+  }
 }
+
+$header_height: 60px;
 
 body {
   font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
-  font-size: 1.6em;
+  font-size: 16px;
   background-color: #243856;
   color: rgb(228, 228, 228);
   font-weight: 500;
@@ -15,107 +19,93 @@ body {
 .wrapper {
   max-width: 900px;
   margin: 0 auto;
-  padding: 10px 10px 0;
-  h1 {
-    font-size: 30px;
-  }
-  h2 {
-    font-size: 18px;
-  }
+  padding: 0 10px;
 
   header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: $header_height;
+
+    h1 {
+      font-size: 30px;
+    }
+
+    h2 {
+      font-size: 18px;
+    }
   }
 
   main {
-    margin-top: 20px;
-
+    min-height: calc(100vh - #{$header_height});
+    @include query(600) {
+      display: flex;
+    }
     .controller-container {
-      font-size: 0;
-      padding-right: 10px;
       margin-bottom: 20px;
       input {
         font-size: 16px;
         outline: none;
         border: none;
+        border-radius: 10px;
         -webkit-appearance: none;
         margin-bottom: 10px;
         transition: 0.3s;
       }
       .inpTask {
         background-color: #fff;
-        width: 300px;
-        padding: 2px 5px;
+        width: 100%;
+        padding: 8px 10px;
       }
-      .btnTask {
-        display: block;
-        background-color: rgb(67, 206, 102);
-        color: #fff;
-        width: 80px;
-        padding: 2px 7px;
-        &:hover {
-          background-color: rgb(40, 141, 66);
+      .controller-btn {
+        input[type="submit"] {
+          color: #fff;
+          padding: 10px 10px;
+          cursor: pointer;
+          min-width: 90px;
+        }
+        .btnTask {
+          background-color: rgb(67, 206, 102);
+          &:hover {
+            background-color: rgb(40, 141, 66);
+          }
+        }
+        .btnDeleteAll {
+          background-color: rgb(206, 83, 67);
+          margin-left: 10px;
+          &:hover {
+            background-color: rgb(141, 52, 40);
+          }
         }
       }
-    }
-  }
-
-  .btnDeleteAll {
-    background-color: rgb(206, 83, 67);
-    color: #fff;
-    width: 80px;
-    height: 30px;
-    outline: none;
-    border: none;
-    transition: 0.3s;
-    &:hover {
-      background-color: rgb(141, 52, 40);
     }
   }
 
   ul {
     margin: 0;
     padding: 0;
-    max-width: calc(900px - 310px);
 
     li {
       display: flex;
       margin-bottom: 20px;
-      max-width: 300px;
+      $btn_width: 30px;
       .finish {
+        display: block;
+        font-size: 18px;
+        width: $btn_width;
+        height: $btn_width;
         outline: none;
         border: none;
-        font-size: 18px;
-        background-color: transparent;
+        border-radius: 50%;
+        background-color: #dad9de;
+        color: #3a687e;
         cursor: pointer;
-        color: rgb(219, 142, 79);
+        margin-right: 10px;
         padding: 0;
       }
       p {
-        width: 100%;
-        margin-left: 10px;
+        width: calc(100% - #{$btn_width} - 10px);
         word-wrap: break-word;
-      }
-    }
-  }
-}
-
-@media screen and (min-width: 600px) {
-  main {
-    display: flex;
-
-    ul {
-      border-left: 1px solid rgb(228, 228, 228);
-      .finish {
-        outline: none;
-        border: none;
-        font-size: 18px;
-        background-color: transparent;
-        cursor: pointer;
-        color: rgb(219, 142, 79);
-        margin-left: 10px;
       }
     }
   }
