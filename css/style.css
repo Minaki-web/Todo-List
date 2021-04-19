@@ -96,9 +96,24 @@ main .controller-container .controller-btn .btnDeleteAll:hover {
   background-color: #8d3428;
 }
 
+@media screen and (min-width: 600px) {
+  main .todo-container {
+    width: calc(100% - 310px);
+  }
+}
+
 main .todo-container ul {
   margin: 0;
   padding: 0;
+}
+
+@media screen and (min-width: 600px) {
+  main .todo-container ul {
+    width: 100%;
+    margin-left: 10px;
+    padding: 0 10px;
+    border-left: 1px solid white;
+  }
 }
 
 main .todo-container ul li {

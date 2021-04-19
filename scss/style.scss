@@ -84,10 +84,18 @@ main {
   }
 
   .todo-container {
+    @include query(600) {
+      width: calc(100% - 310px);
+    }
     ul {
       margin: 0;
       padding: 0;
-
+      @include query(600) {
+        width: 100%;
+        margin-left: 10px;
+        padding: 0 10px;
+        border-left: 1px solid rgb(255, 255, 255);
+      }
       li {
         display: flex;
         margin-bottom: 20px;
