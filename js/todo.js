@@ -23,7 +23,9 @@ function deleteData() {
         const listItem = this.parentNode;
         listItem.remove();
         localStorage.clear();
-        Swal.fire("You did it!", "You've accomplished that.", "success");
+        Swal.fire("You did it!", "You've accomplished that.", "success").then(() => {
+          inpTask.focus();
+        });
         const afterDeleteDataLists = ul[0].innerHTML;
         jsonData = JSON.stringify(afterDeleteDataLists);
         localStorage.setItem("data", jsonData);
@@ -37,6 +39,7 @@ const jsonItems = localStorage.getItem("data");
 const jsonObj = JSON.parse(jsonItems);
 document.querySelector(".list-todo").innerHTML = jsonObj;
 deleteData();
+inpTask.focus();
 
 // 追加
 btnTask.addEventListener("click", (e) => {
@@ -80,6 +83,7 @@ btnTask.addEventListener("click", (e) => {
 
   deleteData();
 
+  inpTask.focus();
   return false;
 });
 
@@ -105,6 +109,8 @@ btnDeleteAll.addEventListener("click", (e) => {
       list.remove();
     });
     localStorage.clear();
-    Swal.fire("Deleted.", "All tasks has been deleted.", "success");
+    Swal.fire("Deleted.", "All tasks has been deleted.", "success").then(() => {
+      inpTask.focus();
+    });
   });
 });

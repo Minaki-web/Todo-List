@@ -16,6 +16,14 @@ body {
   font-weight: 500;
 }
 
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
 .wrapper {
   max-width: 900px;
   margin: 0 auto;
@@ -26,14 +34,6 @@ header {
   align-items: center;
   justify-content: space-between;
   height: $header_height;
-
-  h1 {
-    font-size: 30px;
-  }
-
-  h2 {
-    font-size: 18px;
-  }
 }
 
 main {
@@ -41,84 +41,88 @@ main {
   @include query(600) {
     display: flex;
   }
-  .controller-container {
-    margin-bottom: 20px;
-    @include query(600) {
-      width: 310px;
-    }
-    input {
-      font-size: 16px;
-      outline: none;
-      border: none;
-      border-radius: 10px;
-      -webkit-appearance: none;
-      margin-bottom: 10px;
-      transition: 0.3s;
-    }
-    .inpTask {
-      background-color: #fff;
-      width: 100%;
-      padding: 8px 10px;
-    }
-    .controller-btn {
-      input[type="submit"] {
-        color: #fff;
-        padding: 10px 10px;
-        cursor: pointer;
-        min-width: 90px;
-      }
-      .btnTask {
-        background-color: rgb(67, 206, 102);
-        &:hover {
-          background-color: rgb(40, 141, 66);
-        }
-      }
-      .btnDeleteAll {
-        background-color: rgb(206, 83, 67);
-        margin-left: 10px;
-        &:hover {
-          background-color: rgb(141, 52, 40);
-        }
-      }
+}
+
+.controller-container {
+  margin-bottom: 20px;
+  @include query(600) {
+    width: 310px;
+  }
+  input {
+    font-size: 16px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    -webkit-appearance: none;
+    margin-bottom: 10px;
+    transition: 0.3s;
+  }
+}
+
+.inpTask {
+  background-color: #fff;
+  width: 100%;
+  padding: 8px 10px;
+}
+
+.controller-btn {
+  input[type="submit"] {
+    color: #fff;
+    padding: 10px 10px;
+    cursor: pointer;
+    min-width: 90px;
+  }
+  .btnTask {
+    background-color: rgb(67, 206, 102);
+    &:hover {
+      background-color: rgb(40, 141, 66);
     }
   }
-
-  .todo-container {
-    @include query(600) {
-      width: calc(100% - 310px);
+  .btnDeleteAll {
+    background-color: rgb(206, 83, 67);
+    margin-left: 10px;
+    &:hover {
+      background-color: rgb(141, 52, 40);
     }
-    ul {
-      margin: 0;
+  }
+}
+
+.todo-container {
+  @include query(600) {
+    width: calc(100% - 310px);
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  @include query(600) {
+    width: 100%;
+    margin-left: 10px;
+    padding: 0 10px;
+    border-left: 1px solid rgb(255, 255, 255);
+  }
+  li {
+    display: flex;
+    margin-bottom: 20px;
+    $btn_width: 30px;
+    .finish {
+      display: block;
+      font-size: 18px;
+      width: $btn_width;
+      height: $btn_width;
+      outline: none;
+      border: none;
+      border-radius: 50%;
+      background-color: #dad9de;
+      color: #3a687e;
+      cursor: pointer;
+      margin-right: 10px;
       padding: 0;
-      @include query(600) {
-        width: 100%;
-        margin-left: 10px;
-        padding: 0 10px;
-        border-left: 1px solid rgb(255, 255, 255);
-      }
-      li {
-        display: flex;
-        margin-bottom: 20px;
-        $btn_width: 30px;
-        .finish {
-          display: block;
-          font-size: 18px;
-          width: $btn_width;
-          height: $btn_width;
-          outline: none;
-          border: none;
-          border-radius: 50%;
-          background-color: #dad9de;
-          color: #3a687e;
-          cursor: pointer;
-          margin-right: 10px;
-          padding: 0;
-        }
-        p {
-          width: calc(100% - #{$btn_width} - 10px);
-          word-wrap: break-word;
-        }
-      }
+    }
+    p {
+      width: calc(100% - #{$btn_width} - 10px);
+      word-wrap: break-word;
     }
   }
 }

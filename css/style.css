@@ -6,6 +6,14 @@ body {
   font-weight: 500;
 }
 
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
 .wrapper {
   max-width: 900px;
   margin: 0 auto;
@@ -25,14 +33,6 @@ header {
   height: 60px;
 }
 
-header h1 {
-  font-size: 30px;
-}
-
-header h2 {
-  font-size: 18px;
-}
-
 main {
   min-height: calc(100vh - 60px);
 }
@@ -45,17 +45,17 @@ main {
   }
 }
 
-main .controller-container {
+.controller-container {
   margin-bottom: 20px;
 }
 
 @media screen and (min-width: 600px) {
-  main .controller-container {
+  .controller-container {
     width: 310px;
   }
 }
 
-main .controller-container input {
+.controller-container input {
   font-size: 16px;
   outline: none;
   border: none;
@@ -66,49 +66,49 @@ main .controller-container input {
   transition: 0.3s;
 }
 
-main .controller-container .inpTask {
+.inpTask {
   background-color: #fff;
   width: 100%;
   padding: 8px 10px;
 }
 
-main .controller-container .controller-btn input[type="submit"] {
+.controller-btn input[type="submit"] {
   color: #fff;
   padding: 10px 10px;
   cursor: pointer;
   min-width: 90px;
 }
 
-main .controller-container .controller-btn .btnTask {
+.controller-btn .btnTask {
   background-color: #43ce66;
 }
 
-main .controller-container .controller-btn .btnTask:hover {
+.controller-btn .btnTask:hover {
   background-color: #288d42;
 }
 
-main .controller-container .controller-btn .btnDeleteAll {
+.controller-btn .btnDeleteAll {
   background-color: #ce5343;
   margin-left: 10px;
 }
 
-main .controller-container .controller-btn .btnDeleteAll:hover {
+.controller-btn .btnDeleteAll:hover {
   background-color: #8d3428;
 }
 
 @media screen and (min-width: 600px) {
-  main .todo-container {
+  .todo-container {
     width: calc(100% - 310px);
   }
 }
 
-main .todo-container ul {
+ul {
   margin: 0;
   padding: 0;
 }
 
 @media screen and (min-width: 600px) {
-  main .todo-container ul {
+  ul {
     width: 100%;
     margin-left: 10px;
     padding: 0 10px;
@@ -116,14 +116,14 @@ main .todo-container ul {
   }
 }
 
-main .todo-container ul li {
+ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 20px;
 }
 
-main .todo-container ul li .finish {
+ul li .finish {
   display: block;
   font-size: 18px;
   width: 30px;
@@ -138,7 +138,7 @@ main .todo-container ul li .finish {
   padding: 0;
 }
 
-main .todo-container ul li p {
+ul li p {
   width: calc(100% - 30px - 10px);
   word-wrap: break-word;
 }
