@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 @mixin query($minWidth) {
-  @media screen and (min-width: $minWidth+ "px") {
+  @media screen and (min-width: $minWidth+ 'px') {
     @content;
   }
 }
@@ -9,7 +9,8 @@
 $header_height: 60px;
 
 body {
-  font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+  font-family: 'Helvetica Neue', 'Helvetica', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Arial', 'Yu Gothic',
+    'Meiryo', sans-serif;
   font-size: 16px;
   background-color: #243856;
   color: rgb(228, 228, 228);
@@ -37,7 +38,7 @@ header {
 }
 
 main {
-  min-height: calc(100vh - #{$header_height});
+  min-height: calc(100vh - #{$header_height} - 30px);
   @include query(600) {
     display: flex;
   }
@@ -66,7 +67,7 @@ main {
 }
 
 .controller-btn {
-  input[type="submit"] {
+  input[type='submit'] {
     color: #fff;
     padding: 10px 10px;
     cursor: pointer;
@@ -131,4 +132,5 @@ footer {
   font-size: 14px;
   text-align: center;
   font-weight: normal;
+  height: 30px;
 }
